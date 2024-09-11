@@ -1,0 +1,81 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/weather-app/dist
+/weather-app/tmp
+/weather-app/out-tsc
+/weather-app/bazel-out
+
+# Node
+/weather-app/node_modules
+/weather-app/npm-debug.log
+/weather-app/yarn-error.log
+
+# IDEs and editors
+/weather-app/.idea/
+/weather-app/.project
+/weather-app/.classpath
+/weather-app/.c9/
+/weather-app/*.launch
+/weather-app/.settings/
+/weather-app/*.sublime-workspace
+
+
+# Visual Studio Code
+/weather-app/.vscode/*
+/weather-app/!.vscode/settings.json
+/weather-app/!.vscode/tasks.json
+/weather-app/!.vscode/launch.json
+/weather-app/!.vscode/extensions.json
+/weather-app/.history/*
+
+# Miscellaneous
+/weather-app/.angular/cache
+/weather-app/.sass-cache/
+/weather-app/connect.lock
+/weather-app/coverage
+/weather-app/libpeerconnection.log
+/weather-app/testem.log
+/weather-app/typings
+
+# System files
+/weather-app/.DS_Store
+/weather-app/Thumbs.db
+
+
+**/environment.ts
+**/environment.development.ts
+
+## DEVAPIMOCK ##
+/DevAPIMock/HELP.md
+/DevAPIMock/target/
+/DevAPIMock/!.mvn/wrapper/maven-wrapper.jar
+/DevAPIMock/!**/src/main/**/target/
+/DevAPIMock/!**/src/test/**/target/
+
+### STS ###
+/DevAPIMock/.apt_generated
+/DevAPIMock/.classpath
+/DevAPIMock/.factorypath
+/DevAPIMock/.project
+/DevAPIMock/.settings
+/DevAPIMock/.springBeans
+/DevAPIMock/.sts4-cache
+
+### IntelliJ IDEA ###
+/DevAPIMock/.idea
+/DevAPIMock/*.iws
+/DevAPIMock/*.iml
+/DevAPIMock/*.ipr
+
+### NetBeans ###
+/DevAPIMock/nbproject/private/
+/DevAPIMock/nbbuild/
+/DevAPIMock/dist/
+/DevAPIMock/nbdist/
+/DevAPIMock/.nb-gradle/
+/DevAPIMock/build/
+/DevAPIMock/!**/src/main/**/build/
+/DevAPIMock/!**/src/test/**/build/
+### VS Code ###
+/DevAPIMock/.vscode/
