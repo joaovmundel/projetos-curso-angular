@@ -22,11 +22,7 @@
 
 
 # Visual Studio Code
-/weather-app/.vscode/*
-/weather-app/!.vscode/settings.json
-/weather-app/!.vscode/tasks.json
-/weather-app/!.vscode/launch.json
-/weather-app/!.vscode/extensions.json
+/weather-app/.vscode
 /weather-app/.history/*
 
 # Miscellaneous
