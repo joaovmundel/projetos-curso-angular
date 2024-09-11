@@ -1,11 +1,16 @@
-<div class="card" [style]="image">
-  <div class="infos">
-    <p id="main">
-      {{ main }}
-    </p>
-    <p id="cityName">
-      {{ weather }}
-    </p>
-    <p id="temperature">{{ temperature }} °C</p>
+<div class="card-container">
+  <p id="carregando">
+    {{!image && "Carregando..." || ""}}
+  </p>
+  <div class="card" [style]="image">
+    <div class="infos">
+      <p id="main">
+        {{ weather.weather[0].main }}
+      </p>
+      <p id="cityName">
+        {{ weather.name }}
+      </p>
+      <p id="temperature">{{ weather.main.temp }} °C</p>
+    </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { WeatherDatas } from 'src/app/models/interfaces/weatherdatas.interface';
 
 @Component({
   selector: 'app-weather-card',
@@ -6,15 +7,13 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./weather-card.component.scss'],
 })
 export class WeatherCardComponent implements OnChanges {
-  @Input() weather: string = '';
-  @Input() temperature!: number;
-  @Input() main: string = '';
-  image: string = 'background-image: url("../../../assets/Sunny.jpg"); background-size: 100% 100%; background-repeat: no-repeat;`;'
+  @Input() weather!: WeatherDatas;
+  image: string = ''
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if('main' in changes){
-      this.image = `background-image: url('../../../assets/${this.main}.jpg'); background-size: 100% 100%; background-repeat: no-repeat;`;
+    if('weather' in changes){
+      this.image = `background-image: url('../../../assets/${this.weather.weather[0].main}.jpg'); background-size: 100% 100%; background-repeat: no-repeat;`;
     }
   }
 }
