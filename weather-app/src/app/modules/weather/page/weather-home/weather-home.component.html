@@ -1,23 +1,19 @@
-<div class="container">
-  <div class="searchBox">
-    <div class="search">
-      <form #form="ngForm" (submit)="onSubmit()"></form>
-      <input
-        type="text"
-        placeholder="Buscar localização"
-        name="city"
-        [(ngModel)]="cityName"
-      />
-      <span (click)="onSubmit()">
-        <fa-icon
-          animation="fade"
-          style="--fa-animation-duration: 3s; cursor: pointer"
-          size="lg"
-          class="search-icon"
-          [icon]="searchIcon"
-        ></fa-icon>
-      </span>
-    </div>
-  </div>
-  <app-weather-card [weather]="weather && weather"></app-weather-card>
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()"></form>
+  <input
+    type="text"
+    placeholder="Buscar localização"
+    name="city"
+    [(ngModel)]="cityName"
+  />
+  <span (click)="onSubmit()">
+    <fa-icon
+      animation="fade"
+      style="--fa-animation-duration: 3s; cursor: pointer"
+      size="lg"
+      class="search-icon"
+      [icon]="searchIcon"
+    ></fa-icon>
+  </span>
 </div>
+<app-weather-card [weather]="weather && weather"></app-weather-card>

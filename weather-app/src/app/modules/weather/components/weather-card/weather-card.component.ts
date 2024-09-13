@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  faDroplet,
+  faTemperatureHigh,
+  faTemperatureLow,
+  faWind,
+} from '@fortawesome/free-solid-svg-icons';
+
 import { WeatherDatas } from 'src/app/models/interfaces/weatherdatas.interface';
 
 @Component({
@@ -8,12 +15,18 @@ import { WeatherDatas } from 'src/app/models/interfaces/weatherdatas.interface';
 })
 export class WeatherCardComponent implements OnChanges {
   @Input() weather!: WeatherDatas;
-  image: string = ''
+  image: string = '';
+
+  minTemperatureIcon = faTemperatureLow;
+  maxTemperatureIcon = faTemperatureHigh;
+  humidityIcon = faDroplet;
+  windIcon = faWind;
+
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if('weather' in changes){
-      this.image = `background-image: url('../../../assets/${this.weather.weather[0].main}.jpg'); background-size: 100% 100%; background-repeat: no-repeat;`;
+    if ('weather' in changes) {
+      this.image = `../../../assets/${this.weather.weather[0].main}.jpg`;
     }
   }
 }
