@@ -27,7 +27,7 @@ public class WeatherData {
         this.base = "stations";
 
         Main main = new Main();
-        main.generateRandom();
+        main.generateRandom(weather);
 
         this.main = main;
 
@@ -38,7 +38,7 @@ public class WeatherData {
         this.wind = wind;
         if (weather.getMain().equalsIgnoreCase("Snowy") && main.getTemp() > 0) {
             main.setTemp(Utils.round((main.getTemp()-5) * (-1), 1));
+            main.setTemp_min(Utils.round((main.getTemp() - Utils.generateRandomInt(10, 15)) + Math.random(), 1));
         }
-
     }
 }
